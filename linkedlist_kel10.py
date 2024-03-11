@@ -1,3 +1,4 @@
+from colorama import Fore, Style
 class MenuItem:
     def __init__(self, NamaMenu, Harga):
         self.NamaMenu = NamaMenu
@@ -27,10 +28,12 @@ def DisplayMenu():
         current = current.next
 
 # Main program
-print("Selamat Datang di E-Order Warung D4 MIE")
+print(Fore.LIGHTYELLOW_EX +"Selamat Datang di E-Order Warung D4 MIE")
 print("Ice Cream dan Mie Pedas tersedia di warung ini!!\n")
 
-print("DAFTAR MENU WARUNG D4 MIE\n")
+print(Fore.LIGHTBLUE_EX +"============================" + Style.RESET_ALL)
+print(Fore.LIGHTGREEN_EX +"||DAFTAR MENU WARUNG D4 MIE||"+ Style.RESET_ALL)
+print(Fore.LIGHTBLUE_EX +"============================" + Style.RESET_ALL)
 addMenuItem("Mixue Ice Cream", 5000)
 addMenuItem("Boba Shake", 16000)
 addMenuItem("Mi Sundae", 14000)
@@ -46,7 +49,7 @@ harga = [0 for i in range(MaxPesanan)]
 Jml_Pesanan = 0
 
 while True:
-    order = input("Silahkan ketik pesanan Anda: ")
+    order = input(Fore.LIGHTBLUE_EX +"Silahkan ketik pesanan Anda: "+Style.RESET_ALL)
     if order == "done":
         break
     print("------ (Ketik 'done' untuk step berikutnya) ------")
@@ -62,8 +65,8 @@ while True:
             break
         current = current.next
 
-print("\n|| Pesanan Anda ||")
+print(Fore.LIGHTYELLOW_EX +"\n|| Pesanan Anda ||")
 for i in range(Jml_Pesanan):
     print(pesanan[i], "- Rp.", harga[i])
 print("Total harga pesanan Anda: Rp.", totalHarga)
-print("------ Terima Kasih telah E-Order di Warung Kami ------")
+print("------ Terima Kasih telah Membeli di Warung Kami ------")
