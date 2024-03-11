@@ -28,7 +28,7 @@ def DisplayMenu():
         current = current.next
 
 # Main program
-print(Fore.LIGHTYELLOW_EX +"Selamat Datang di E-Order Warung D4 MIE")
+print(Fore.LIGHTYELLOW_EX +"Selamat Datang di Warung D4 MIE")
 print("Ice Cream dan Mie Pedas tersedia di warung ini!!\n")
 
 print(Fore.LIGHTBLUE_EX +"============================" + Style.RESET_ALL)
